@@ -22,7 +22,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    DC.ready(this.initViewer)
+    DC.ready().then(this.initViewer)
   },
 })
 </script>

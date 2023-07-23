@@ -27,6 +27,7 @@ module.exports = {
   chainWebpack: (config) => {
     config.resolve.extensions
       .add('.js')
+      .add('.cjs')
       .add('.vue')
       .end()
       .alias.set('dvgis', path.resolve(__dirname, dvgisDist))

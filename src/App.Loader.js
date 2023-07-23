@@ -1,13 +1,12 @@
 /**
- * @Author: Caven
- * @Date: 2020-11-17 18:21:49
+ @author : Caven Chen
+ @date : 2023-05-06
  */
 
 import { createApp } from 'vue'
-import DC from 'dvgis/dc-sdk/dist/dc.base.min'
-import DcCore from 'dvgis/dc-sdk/dist/dc.core.min'
-import DcPlugins from 'dvgis/dc-plugins/dist/dc.plugins.min'
-import 'dvgis/dc-sdk/dist/dc.core.min.css'
+
+import * as DC from 'dvgis/dc-sdk'
+import 'dvgis/dc-sdk/dist/dc.min.css'
 
 const hub = createApp({})
 
@@ -21,8 +20,6 @@ class AppLoader {
   install() {
     global.DC = DC
     global.Hub = hub
-    DC.use(DcCore)
-    DC.use(DcPlugins)
   }
 }
 

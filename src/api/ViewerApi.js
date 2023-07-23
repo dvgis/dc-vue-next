@@ -13,9 +13,12 @@ class ViewerApi {
   }
 
   loadBaseLayer() {
-    let baselayer = DC.ImageryLayerFactory.createGoogleImageryLayer({
-      style: 'img',
-    })
+    let baselayer = DC.ImageryLayerFactory.createImageryLayer(
+      DC.ImageryType.AMAP,
+      {
+        style: 'img',
+      }
+    )
     this.viewer.addBaseLayer(baselayer)
   }
 }
